@@ -1,13 +1,13 @@
-// Adds the current day to the top of the webpage.
-$(function () {
-  $("#currentDay").append(dayjs().format("dddd, M/D/YY"));
-});
-
 // Sets currentTime to the hour number, 01 through 24.
 var currentTime = dayjs().format("HH");
 
 // Arranges all time-blocks into an array.
 var timeBlockArray = $(".time-block");
+
+// Adds the current day to the top of the webpage.
+$(function () {
+  $("#currentDay").append(dayjs().format("dddd, M/D/YY"));
+});
 
 // Applies the past, present, or future class to each time-block.
 $(function () {
@@ -28,15 +28,9 @@ $(function () {
   }
 });
 
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-
-// Adds a click event to the save button which saves textarea to local storage.
-
+// Adds a click event to the each save button which saves the corresponding textarea to local storage.
+// TODO: Rewrite code so it is not repetitive.
+// HINT: What does `this` reference in the click listener function? How can DOM traversal be used to get the "hour-x" id of the time-block containing the button that was clicked? How might the id be useful when saving the description in local storage?
 $(function () {
   $("#09")
     .children()
@@ -104,13 +98,23 @@ $(function () {
     });
 });
 
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-//
-//
-
+// Sets the value of each textarea element to the corresponding localStorage value.
+// TODO: Rewrite code so it is not repetitive.
 $(function () {
-  $("#16").children().eq(2).val();
+  var scheduledEvent09 = localStorage.getItem("scheduledEvent09");
+  $("#09").children().eq(1).append(scheduledEvent09);
+  var scheduledEvent10 = localStorage.getItem("scheduledEvent10");
+  $("#10").children().eq(1).append(scheduledEvent10);
+  var scheduledEvent11 = localStorage.getItem("scheduledEvent11");
+  $("#11").children().eq(1).append(scheduledEvent11);
+  var scheduledEvent12 = localStorage.getItem("scheduledEvent12");
+  $("#12").children().eq(1).append(scheduledEvent12);
+  var scheduledEvent13 = localStorage.getItem("scheduledEvent13");
+  $("#13").children().eq(1).append(scheduledEvent13);
+  var scheduledEvent14 = localStorage.getItem("scheduledEvent14");
+  $("#14").children().eq(1).append(scheduledEvent14);
+  var scheduledEvent15 = localStorage.getItem("scheduledEvent15");
+  $("#15").children().eq(1).append(scheduledEvent15);
+  var scheduledEvent16 = localStorage.getItem("scheduledEvent16");
+  $("#16").children().eq(1).append(scheduledEvent16);
 });
