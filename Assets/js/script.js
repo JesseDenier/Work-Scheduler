@@ -38,12 +38,70 @@ $(function () {
 // Adds a click event to the save button which saves textarea to local storage.
 
 $(function () {
-  // Adds a listener for click events to the save buttons.
-  $(".saveBtn").on("click", function () {
-    var scheduledEvent = $(".description").val();
-    localStorage.setItem("scheduledEvent", scheduledEvent);
-    console.log(scheduledEvent);
-  });
+  $("#09")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent09 = $("#09").children().eq(1).val();
+      localStorage.setItem("scheduledEvent09", scheduledEvent09);
+      console.log(scheduledEvent09);
+    });
+  $("#10")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent10 = $("#10").children().eq(1).val();
+      localStorage.setItem("scheduledEvent10", scheduledEvent10);
+      console.log(scheduledEvent10);
+    });
+  $("#11")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent11 = $("#11").children().eq(1).val();
+      localStorage.setItem("scheduledEvent11", scheduledEvent11);
+      console.log(scheduledEvent11);
+    });
+  $("#12")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent12 = $("#12").children().eq(1).val();
+      localStorage.setItem("scheduledEvent12", scheduledEvent12);
+      console.log(scheduledEvent12);
+    });
+  $("#13")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent13 = $("#13").children().eq(1).val();
+      localStorage.setItem("scheduledEvent13", scheduledEvent13);
+      console.log(scheduledEvent13);
+    });
+  $("#14")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent14 = $("#14").children().eq(1).val();
+      localStorage.setItem("scheduledEvent14", scheduledEvent14);
+      console.log(scheduledEvent14);
+    });
+  $("#15")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent15 = $("#15").children().eq(1).val();
+      localStorage.setItem("scheduledEvent15", scheduledEvent15);
+      console.log(scheduledEvent15);
+    });
+  $("#16")
+    .children()
+    .eq(2)
+    .on("click", function () {
+      var scheduledEvent16 = $("#16").children().eq(1).val();
+      localStorage.setItem("scheduledEvent16", scheduledEvent16);
+      console.log(scheduledEvent16);
+    });
 });
 
 //
@@ -54,7 +112,5 @@ $(function () {
 //
 
 $(function () {
-  for (var i = 0; i < timeBlockArray.length; i++) {
-    console.log("banana");
-  }
+  $("#16").children().eq(2).val();
 });
