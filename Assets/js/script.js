@@ -30,10 +30,11 @@ $(function () {
 
 // Adds a click event to the each save button which saves the corresponding textarea to local storage.
 $(function () {
+  // Adds the following function to every save button.
   $(".saveBtn").on("click", function () {
+    // Sets scheduledEvent to the clicked save buttons sister description value.
     var scheduledEvent = $(this).parent().children().eq(1).val();
-    console.log(scheduledEvent);
-    console.log($(this).parent().attr("id"));
+    // Saves scheduledEvent as a local storage item with the name "scheduledEvent + the id of the save buttons parent element.
     localStorage.setItem(
       "scheduledEvent" + $(this).parent().attr("id"),
       scheduledEvent
@@ -43,10 +44,13 @@ $(function () {
 
 // Sets the value of each textarea element to the corresponding localStorage value.
 $(function () {
+  // Iterates over each time-block in the array.
   for (var i = 0; i < timeBlockArray.length; i++) {
+    // Sets scheduledEvent equal to the value saved in local storage.
     var scheduledEvent = localStorage.getItem(
       "scheduledEvent" + timeBlockArray[i].id
     );
+    // Appends scheduled event to each time block.
     $("#" + timeBlockArray[i].id)
       .children()
       .eq(1)
